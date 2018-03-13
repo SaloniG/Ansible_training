@@ -1,0 +1,11 @@
+#Add users in Domain
+- name: Add users in Domain
+  win_domain_user: 
+    name: '{{ item.name }}'
+    firstname: '{{ item.firstname }}'
+    surname: '{{ item.surname }}'
+    password: '{{ item.password }}'
+    email: '{{ item.email }}'
+    state: present
+  with_items:
+    - "{{ user_info }}"

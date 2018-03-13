@@ -1,0 +1,4 @@
+---
+# tasks file for win_ad_user
+- include_vars: user_info.yml
+- include_tasks: add_users.yml
